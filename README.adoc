@@ -1,4 +1,4 @@
-= FSL Community BSP
+= FSL Gizmite BSP
 
 To get the BSP you need to have `repo` installed and use it as:
 
@@ -13,9 +13,9 @@ Download the BSP source:
 
 [source,console]
 $: PATH=${PATH}:~/bin
-$: mkdir fsl-community-bsp
-$: cd fsl-community-bsp
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b jethro
+$: mkdir fsl-gizmite-bsp
+$: cd fsl-gizmite-bsp
+$: repo init -u https://github.com/Gizmite/fsl-gizmite-bsp-platform -b jethro
 $: repo sync
 
 At the end of the commands you have every metadata you need to start work with.
@@ -24,31 +24,31 @@ To start a simple image build:
 
 [source,console]
 $: source ./setup-environment build
-$: bitbake core-image-minimal
+$: bitbake core-image-minimal //TODO: create build type for Gizmite full image
 
 You can use any directory to host your build.
 
-The source code is checked out at `fsl-community-bsp/sources`.
+The source code is checked out at `fsl-gizmite-bsp/sources`.
 
 == Contributing
 
 To contribute to this layer you should send the patches for review to the mailing list.
 
 Mailing list::
-    https://lists.yoctoproject.org/listinfo/meta-freescale
+    //TODO: set up mailing list
 
 Source code::
-    https://github.com/Freescale/fsl-community-bsp-platform
+    https://github.com/Freescale/fsl-gizmite-bsp-platform
 
 When creating patches, please use something like:
 
 [source,console]
-$: git format-patch -s --subject-prefix='fsl-community-bsp-platform][PATCH' origin
+$: git format-patch -s --subject-prefix='fsl-gizmite-bsp-platform][PATCH' origin
 
 When sending patches, please use something like:
 
 [source,console]
-$: git send-email --to meta-freescale@yoctoproject.org <generated patch>
+$: git send-email --to <mailing_list_address> <generated patch>
 
 == Using Development and Testing Branches
 
@@ -57,11 +57,11 @@ Replace the `repo init` command above with one of the following:
 master:: For developers
 +
 [source,console]
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master
+$: repo init -u https://github.com/Gizmite/fsl-gizmite-bsp-platform -b master
 
 master-next:: For intrepid developers and testers
 +
-Patches are typically merged into master-next and then are merged into master after a testing and comment period. It's possible that master-next has something you want or need. But it's also possible that using master-next breaks something that was working before. Use with caution.
+Patches are typically merged into master-next and then are merged into master after a testing and comment period. It's possible that master-next has something you want or need. But it's also possible that using master-next breaks something that was working before. Use with caution. //TODO: start development cycles following this pattern
 
 [source,console]
-$: repo init -u https://github.com/Freescale/fsl-community-bsp-platform -b master-next
+$: repo init -u https://github.com/Gizmite/fsl-gizmite-bsp-platform -b master-next
