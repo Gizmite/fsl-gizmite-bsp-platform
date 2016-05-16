@@ -4,12 +4,10 @@
   <default sync-j="4" revision="jethro"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://github.com/Freescale" name="freescale"/>
   <remote fetch="https://github.com/Gizmite" name="gizmite"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
 
   <project remote="yocto" revision="jethro" name="poky" path="sources/poky"/>
-  <project remote="yocto" revision="jethro" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
 
   <project remote="oe" revision="jethro" name="meta-openembedded" path="sources/meta-openembedded"/>
 
@@ -19,7 +17,5 @@
   </project>
 
   <project remote="gizmite" revision="jethro" name="meta-gizmite" path="sources/meta-gizmite"/>
-
-  <project remote="freescale" revision="jethro" name="Documentation" path="sources/Documentation"/>
 
 </manifest>
